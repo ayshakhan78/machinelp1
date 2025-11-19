@@ -64,7 +64,7 @@ with col2:
     financial_stress = st.slider("Financial Stress (1-5)", 1, 5, 3)
     family_history = st.radio("Family history of mental illness?", ["Yes", "No"])
     job_satisfaction = st.slider("Job Satisfaction (1-5)", 0.0, 5.0, 0.0)
-    study_pressure_hours = st.number_input("Work/Study Hours per week", min_value=0, max_value=24, step=1)
+    study_pressure_hours = st.number_input("Work/Study Hours per day", min_value=0, max_value=24, step=1)
     cgpa = st.number_input("CGPA", min_value=0.0, max_value=10.0, step=0.01)
     degree = st.text_input("Degree")
 
@@ -145,5 +145,6 @@ if st.button("Predict"):
 
         except Exception as e:
             st.error(f"Error during prediction: {e}")
+
 
 
